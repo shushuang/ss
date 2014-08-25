@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from home.views import home_page
+from music.views import music_home
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -10,4 +11,5 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', home_page),
+    url(r'^music/?$', music_home),
 )

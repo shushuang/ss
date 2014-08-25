@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>music home</title>
+    </head>
+    <body>
+        {% load static %}
+        {% for music_path in music_path_list%}
+        <audio src="/static/media/{{ music_path }}" controls="controls">
+        {% endfor %}
+    </body>
+</html>
